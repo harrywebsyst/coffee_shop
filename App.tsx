@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DetailsScreen from './src/screens/DetailsScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 import TabNavigator from './src/navigators/TabNavigator';
+import ProfileScreen from './src/screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,11 @@ const App = () => {
         <Stack.Screen
           name="Payments"
           component={PaymentScreen}
+          options={{animation: 'slide_from_bottom'}}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
           options={{animation: 'slide_from_bottom'}}
         />
       </Stack.Navigator>

@@ -32,33 +32,7 @@ const PaymentMethod: FC<PaymentMethodProps> = ({
               ? COLORS.primaryOrangeHex
               : COLORS.primaryGreyHex,
         },
-      ]}>
-      {isIcon ? (
-        <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 1}}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
-          style={styles.LinearGradientWallet}>
-          <View style={styles.WalletRow}>
-            <CustomIcon
-              name={'wallet'}
-              color={COLORS.primaryOrangeHex}
-              size={FONTSIZE.size_30}
-            />
-            <Text style={styles.PaymentTitle}>{name}</Text>
-            <Text style={styles.PaymentPrice}>$ 100.50</Text>
-          </View>
-        </LinearGradient>
-      ) : (
-        <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 1}}
-          colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
-          style={styles.LinearGradientRegular}>
-          <Image source={icon} style={styles.PaymentImage} />
-          <Text style={styles.PaymentTitle}>{name}</Text>
-        </LinearGradient>
-      )}
+      ]}> 
     </View>
   );
 };
@@ -67,7 +41,7 @@ const styles = StyleSheet.create({
   PaymentCardContainer: {
     borderRadius: BORDERRADIUS.radius_15 * 2,
     backgroundColor: COLORS.primaryGreyHex,
-    borderWidth: 3,
+    borderWidth: 3, 
   },
   LinearGradientWallet: {
     flexDirection: 'row',

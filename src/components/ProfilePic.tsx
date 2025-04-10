@@ -1,14 +1,18 @@
-import {StyleSheet, Image, View} from 'react-native';
+import {StyleSheet, Image, View, Pressable} from 'react-native';
 import React from 'react';
 import {COLORS, SPACING} from '../theme/theme';
+import { useNavigation } from '@react-navigation/native';
 
 const ProfilePic = () => {
+  const navigation = useNavigation()
   return (
     <View style={styles.ImageContainer}>
+      <Pressable onPress={() => navigation.navigate('Profile')}>
       <Image
         style={styles.Image}
         source={require('../assets/app_images/avatar.png')}
       />
+      </Pressable>
     </View>
   );
 };
